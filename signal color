@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+void school_zone_signal(const std::string& signal_color) {
+    if (signal_color == "Flashing Red") {
+        std::cout << "Stop" << std::endl;
+    } else if (signal_color == "Yellow") {
+        std::cout << "Be Ready" << std::endl;
+    } else if (signal_color == "Green") {
+        std::cout << "Proceed" << std::endl;
+    } else {
+        std::cout << "Invalid signal color" << std::endl;
+    }
+}
+
+int main() {
+    // Example usage
+    std::string color;
+    std::cout << "Enter the signal color (Flashing Red, Yellow, Green): ";
+    std::getline(std::cin, color);
+
+    school_zone_signal(color);
+    return 0;
+}
